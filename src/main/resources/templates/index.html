@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>id</th>
+            <th>作成日</th>
+            <th>支払方法</th>
+        </tr>
+        <tr th:each="info: ${pay}">
+            <td th:text="${info.pay_id}"></td>
+            <td th:text="${info.create_date}"></td>
+            <td th:text="${info.pay}"></td>
+        </tr>
+    </table>
+</body>
+</html>
